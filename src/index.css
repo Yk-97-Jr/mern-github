@@ -6,9 +6,9 @@ body {
   background: linear-gradient(
       to bottom right,
       rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.2)
     ),
-    url("/bg.png");
+    url("/bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
