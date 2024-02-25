@@ -1,32 +1,58 @@
-import { FaGithub } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { handleLoginWithGithub } from "../lib/function";
+import { FaHeart } from "react-icons/fa";
 
-const LoginPage = () => {
-	return (
-		<div className='flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen lg:py-0'>
-			<div className='w-full bg-glass rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0'>
-				<div className='p-6 space-y-4 md:space-y-6 sm:p-8'>
-					<h1 className='text-xl font-bold  md:text-2xl text-center'>Login to your account</h1>
-					<button
-						type='button'
-						className='text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 
-						focus:outline-none focus:ring-[#24292F]/50 
-              font-medium rounded-lg flex gap-2 p-2 items-center w-full text-center justify-center'
-						onClick={handleLoginWithGithub}
-					>
-						<FaGithub className='w-5 h-5' />
-						Login with Github
-					</button>
-					<p className='text-sm font-light text-gray-500'>
-						{"Don't"} have an account?{" "}
-						<Link to='/signup' className='font-medium text-primary-600 hover:underline text-blue-600'>
-							Sign Up
-						</Link>
-					</p>
-				</div>
-			</div>
-		</div>
-	);
+const LikesPage = () => {
+  return (
+    <div className="relative overflow-x-auto shadow-md rounded-lg px-4">
+      <table className="w-full text-sm text-left rtl:text-right bg-glass overflow-hidden">
+        <thead className="text-xs uppercase bg-glass">
+          <tr>
+            <th scope="col" className="p-4">
+              <div className="flex items-center">No</div>
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Username
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Date
+            </th>
+            <th scope="col" className="px-6 py-3">
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="bg-glass border-b">
+            <td className="w-4 p-4">
+              <div className="flex items-center">
+                <span>1</span>
+              </div>
+            </td>
+            <th
+              scope="row"
+              className="flex items-center px-6 py-4 whitespace-nowrap "
+            >
+              <img
+                className="w-10 h-10 rounded-full"
+                src={
+                  "https://ps.w.org/user-avatar-reloaded/assets/icon-256x256.png?rev=2540745"
+                }
+                alt="Jese image"
+              />
+              <div className="ps-3">
+                <div className="text-base font-semibold">dasdas</div>
+              </div>
+            </th>
+            <td className="px-6 py-4">das</td>
+            <td className="px-6 py-4">
+              <div className="flex items-center">
+                <FaHeart size={22} className="text-red-500 mx-2" />
+                Liked your profile
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
 };
-export default LoginPage;
+export default LikesPage;
