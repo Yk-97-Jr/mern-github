@@ -1,5 +1,7 @@
 # Build and Deploy a Github-like App | React, MongoDB, Express.js, Passport.js
 
+## [See Demo](https://gitlike.onrender.com)
+
 ![Demo App](frontend/public/Screenshot%20from%202024-03-05%2001-38-18.png)
 
 Some Features:
